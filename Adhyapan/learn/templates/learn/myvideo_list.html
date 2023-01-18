@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block content %}
+<br><br>
+<div class="p-5">
+<h1 class="myhead1">Video List</h1>
+<hr>
+
+<form class="form-inline">
+<input class="form-control" value="{{ request.GET.si }}" placeholder="Search" type="text" name="si" />
+<input class="btn btn-dark mx-3" type="submit" />
+</form><br>
+<table class="table table-stripped">
+    <thead class="thead-dark">
+        <tr>
+            <th>Title</th>
+            <th>Topic</th>
+            <th>Uploaded By</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+{% for n1 in myvideo_list %}
+        <tr>
+            <td>{{n1.title}}</td>
+            <td>{{n1.topic}}</td>
+            <td>{{n1.uploaded_by}}</td>
+            <td><a class="btn btn-dark btn-sm" href="/learn/video/{{n1.id}}">Read More</a></td>
+        </tr>
+{% endfor %}
+</table>
+</div>
+
+{% endblock %}

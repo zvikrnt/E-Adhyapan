@@ -1,0 +1,74 @@
+@charset "ISO-8859-1";
+body {
+	background-image: url("/static/images/bg3.jpg");
+}
+#head1{
+	font-size: 80px;
+	color: #6f0000;
+	text-align: center;
+	text-shadow: 3px 3px 3px black;
+	background-color: #fee0e1;
+	border: 2px solid #6f0000;
+	border-radius: 20px;
+}
+.box{
+	background-color: lime;
+	width: 50%;
+}
+@media(max-width:600px){
+	.box{
+		width: 100%;
+	}	
+}
+
+#myhead2{
+	height: 240px;
+}
+.myhead{
+	position: absolute;
+	left: 10px;
+	top: 10px;
+	font-size: 60px;
+	color: white;
+	text-shadow: 2px 2px 2px black;
+	font-family: cursive;
+}
+
+.navbar-dark .navbar-brand{
+	font-size: 30px;
+	font-weight: bolder;
+	font-family: cursive;
+	text-shadow: 3px 3px 3px black;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+	font-size: 24px;
+	font-weight: bolder;
+	font-family: cursive;
+	text-shadow: 2px 2px 2px black;
+	color: white;
+}
+.myfooter,  .myfooter a{
+	font-size: 18px;
+	font-weight: bolder;
+	font-family: cursive;
+	text-shadow: 1px 1px 1px black;
+	color: white;
+}
+.myfooter .col-sm-5{
+	border-bottom: 1px solid white;
+}
+.myhead1{
+	font-family: cursive;
+	text-shadow: 2px 2px 2px white;
+}
+body{
+	font-size: 1.2em;
+}
+.card{
+	box-shadow: 3px 3px 3px black;
+	transition: 1s;
+}
+.card:hover{
+	transform: scale(1.1);
+}

@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="p-5">
+<h1 class="myhead1">{{ myvideo.title }}</h1>
+<hr>
+<p><strong>Topic :: </strong> {{ myvideo.topic }}</p>
+<p><strong>Description :: </strong>{{ myvideo.description }}</p>
+<p><strong>Uploaded By :: </strong>{{ myvideo.uploaded_by }}</p>
+<div class="row">
+	<div class="col-sm-8 offset-sm-2">
+		{% if myvideo.video %}
+		<video controls class="w-100">
+		  <source src="/media/{{myvideo.video}}" type="video/mp4">
+		</video>
+		
+		{% else %}
+		<div class="embed-responsive embed-responsive-16by9">
+			<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/{{myvideo.youtube_link}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		</div>
+		{% endif %}	
+	</div>
+</div>
+<a class="btn btn-dark my-3" href='/learn/video'>Back</a>
+</div>
+{% endblock %}

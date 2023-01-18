@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="p-5">
+<h1 class="myhead1">{{ notes.Subject }}</h1>
+<hr>
+<p><strong>Topic :: </strong> {{ notes.topic }}</p>
+<p><strong>Description :: </strong>{{ notes.description }}</p>
+<p><strong>Uploaded By :: </strong>{{ notes.uploaded_by }}</p>
+<p><strong>Attachment :: </strong><a href="/media/{{notes.attachment }}">{{ notes.attachment }}</a></p>
+<a class="btn btn-dark my-3" href='/learn/notes'>Back</a>
+</div>
+{% endblock %}

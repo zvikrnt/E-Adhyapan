@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="p-5">
+<h1 class="myhead1">{{ question.subject }}</h1>
+<hr>
+<p><strong>Topic :: </strong> {{ question.topic }}</p>
+<p><strong>Question :: </strong>{{ question.question }}</p>
+<p><strong>Asked By :: </strong>{{ question.asked_by }}</p>
+<p><strong>Date :: </strong>{{ question.cr_date }}</p>
+<p><strong>Answer :: </strong>{{ question.answer }}</p>
+<a class="btn btn-dark my-3" href='/learn/question'>Back</a>
+</div>
+{% endblock %}

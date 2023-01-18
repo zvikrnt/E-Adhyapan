@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block content %}
+<main class="p-5">
+<h1 class="myhead1">Contact</h1>
+<hr>
+<div class="row">
+	<div class="col-sm-6">
+	<h1>Enquiry</h1>
+	<form action="/learn/contact/submit" method="post">
+	{% csrf_token %}
+	<input class="form-control" type="text" name="uname" placeholder="Name" /><br>
+	<input class="form-control" type="email" name="email" placeholder="email" /><br>
+	<input class="form-control" type="tel" name="phone_no" placeholder="phone_no" /><br>
+	<textarea class="form-control" placeholder="MSG" name="msg"></textarea><br>
+	<input class="btn btn-dark btn-block" type="submit"/><br>
+	</form>
+	</div>
+	<div class="col-sm-6">
+	<div class="embed-responsive embed-responsive-4by3">
+	<iframe class="embed-responsive-item" src="https://www.google.com/maps/place/Bhilai+Institute+of+Technology+Durg/@21.1904488,81.2849161,15z/data=!4m10!1m2!2m1!1sbit!3m6!1s0x3a293cf9cb28d18f:0x88523ddfbff6ee3f!8m2!3d21.1941555!4d81.2991696!15sCgNiaXRaBSIDYml0kgEHY29sbGVnZZoBI0NoWkRTVWhOTUc5blMwVkpRMEZuU1VSQk5XSTNWRTUzRUFF4AEA!16zL20vMGczajVx" frameborder="0" style="border:0" allowfullscreen></iframe>
+	</div>
+	</div>
+</div>
+</main>
+
+{% endblock %}

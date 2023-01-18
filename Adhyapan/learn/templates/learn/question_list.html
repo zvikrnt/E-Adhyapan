@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% block content %}
+<br><br>
+<div class="p-5">
+<h1 class="myhead1">Question List</h1>
+<hr>
+
+{% if user.is_authenticated %}
+	<a class="btn btn-dark my-4" href="/learn/question/create">Ask Question</a>
+{% endif %}
+
+<form class="form-inline">
+<input class="form-control" value="{{ request.GET.si }}" placeholder="Search" type="text" name="si" />
+<input class="btn btn-dark mx-3" type="submit" />
+</form><br>
+<table class="table table-stripped">
+    <thead class="thead-dark">
+        <tr>
+            <th>Subject</th>
+            <th>Topic</th>
+            <th>Answered</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+{% for n1 in question_list %}
+        <tr>
+            <td>{{n1.subject}}</td>
+            <td>{{n1.topic}}</td>
+            {% if n1.answer %}
+            <td>Yes</td>
+            {% else %}
+            <td>No</td>
+            {% endif %}
+            <td><a class="btn btn-dark btn-sm" href="/learn/question/{{n1.id}}">Read More</a></td>
+        </tr>
+{% endfor %}
+</table>
+</div>
+
+{% endblock %}

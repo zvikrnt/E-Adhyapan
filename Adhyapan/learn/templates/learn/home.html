@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block content %}
+<div>
+{% if request.GET.msg %}
+<div class="alert alert-primary alert-dismissible fade show" role="alert">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+        <span class="sr-only">Close</span>
+    </button>
+    <strong>Adhayapan!</strong> {{ request.GET.msg }}.
+</div>
+{% endif %}
+
+<div class="row p-5">
+	{% for v1 in videos %}
+	<div class="col-sm-4 p-4">
+	<div class="card">
+	
+	{% if v1.video %}
+		<video class="card-img-top p-1"  controls class="w-100">
+		  <source src="/media/{{v1.video}}" type="video/mp4">
+		</video>
+		
+		{% else %}
+		<div  class="embed-responsive embed-responsive-16by9">
+			<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/{{v1.youtube_link}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		</div>
+		{% endif %}		
+    <div class="card-body">
+        <h4 class="card-title">{{v1.title}}</h4>
+        <p class="card-text">{{v1.topic}}</p>
+    </div>
+	</div>
+	</div>
+	{% endfor %}
+</div>
+</div>
+{% endblock %}
