@@ -11,7 +11,7 @@ This is an E-Adhyapan website built using the Django web framework. It allows us
 ## Getting Started
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-##Prerequisites
+## Prerequisites
 * Python 3.x
 * Django 3.x
 
