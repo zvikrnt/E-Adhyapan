@@ -16,12 +16,12 @@ These instructions will get you a copy of the project up and running on your loc
 * Django 3.x
 
 ## Installation
-Clone the repository: git clone [E-Adhyapan](https://github.com/zvikrnt/E-Adhyapan)
-Navigate to the project directory: cd E-Adhyapan
-Install the requirements: pip install -r requirements.txt
-Create a database and update the settings in e-learning-website/settings.py
-Run migrations: python manage.py migrate
-Start the development server: python manage.py runserver
+1. Clone the repository: git clone [E-Adhyapan](https://github.com/zvikrnt/E-Adhyapan)
+2. Navigate to the project directory: cd E-Adhyapan
+3. Install the requirements: pip install -r requirements.txt
+4. Create a database and update the settings in e-learning-website/settings.py
+5. Run migrations: python manage.py migrate
+6. Start the development server: python manage.py runserver
 
 ## Deployment
 To deploy the website, you can use a service such as Heroku or follow the Django deployment documentation.
