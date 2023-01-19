@@ -19,7 +19,7 @@ These instructions will get you a copy of the project up and running on your loc
 1. Clone the repository: git clone [E-Adhyapan](https://github.com/zvikrnt/E-Adhyapan)
 2. Navigate to the project directory: cd E-Adhyapan
 3. Install the requirements: pip install -r requirements.txt
-4. Create a database and update the settings in e-learning-website/settings.py
+4. Create a database and update the settings in E-Adhyapan/settings.py
 5. Run migrations: python manage.py migrate
 6. Start the development server: python manage.py runserver
 
